@@ -1,29 +1,108 @@
-# LifeOS — Static Working Prototype
+# Life OS v1.5 — Modular Home + Auth + App
 
-A frontend-only LifeOS prototype based on the supplied UI reference. No backend, database, login, or API is required.
-
-## Features
-- Home dashboard
-- Quick access: Documents, Medicines, Expenses, Reminders, Home Inventory, Bills
-- Home inventory: add/delete/search-ready data
-- Medicines: mark doses taken
-- Bills & subscriptions
-- Expenses: add expenses
-- Reminders
-- Local AI-assistant-style screen with demo responses
-- Search across local data
-- Profile/reset demo data
-- Data persists in browser localStorage
-- Responsive mobile-first design
+This package combines the pre-login marketing website, local demo authentication, and the existing Life OS application in one Vite/React project.
 
 ## Run locally
+
 ```bash
 npm install
 npm run dev
 ```
 
-## Build for deployment
+## Build
+
 ```bash
 npm run build
 ```
-Upload the generated `dist` folder to any static host such as Netlify, Vercel, GitHub Pages, Firebase Hosting, or an Nginx/static server.
+
+Vite writes the production build to `dist/`.
+
+## Cloudflare Pages
+
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Root directory: project root (the directory containing `package.json`)
+
+## Modular source structure
+
+```text
+src/
+├── App.jsx
+├── main.jsx
+├── styles.css
+├── components/
+│   ├── Common.jsx
+│   ├── PublicHeader.jsx
+│   └── PublicFooter.jsx
+├── data/
+│   └── seed.js
+├── utils/
+│   └── storage.js
+└── pages/
+    ├── public/
+    │   ├── PublicSite.jsx
+    │   ├── LandingPage.jsx
+    │   ├── AuthPage.jsx
+    │   ├── InfoPage.jsx
+    │   ├── PricingPage.jsx
+    │   ├── BlogPage.jsx
+    │   └── DemoPage.jsx
+    └── app/
+        ├── HomeDashboard.jsx
+        ├── Modules.jsx
+        └── UtilityPages.jsx
+```
+
+## Clickable pre-login experience
+
+The landing-page navigation and CTAs now open real in-app screens for:
+
+- Features
+- How It Works
+- For Families
+- Security
+- Pricing
+- Blog
+- Login
+- Registration
+- Watch Demo
+- Feature Learn More cards
+- AI Builder demo
+
+## Clickable signed-in experience
+
+Home quick-access buttons now open working screens for documents, medicines, expenses, reminders, home inventory, bills, shopping list, and family.
+
+## Authentication note
+
+Authentication remains an MVP/browser demo using localStorage, matching the uploaded source. Replace it with backend authentication before production use.
+
+## Life OS promo video
+
+The public landing page and Demo page now use a reusable `src/components/PromoVideo.jsx` component.
+
+Video assets are local and deploy with the Vite build:
+- `public/media/lifeos-demo.mp4`
+- `public/media/lifeos-demo-poster.jpg`
+
+The video uses English spoken narration plus subtle instrumental background music. It does not autoplay with sound; users start playback deliberately, which is more reliable across browsers and mobile devices.
+
+## Promo video update (v1.7)
+The website now embeds the latest fully branded Life OS promo at `public/media/lifeos-demo.mp4`.
+It includes the fitted opening logo, in-video top-right branding, closing logo card, English narration, and instrumental background music.
+
+Cloudflare Pages settings:
+- Build command: `npm run build`
+- Build output directory: `dist`
+
+
+## v1.8 branding fix
+A single shared `LifeOSLogo` component now uses `/public/brand/lifeos-logo.png` across the app. The favicon is also generated from the same brand artwork.
+
+## v1.8.1 build fix
+
+Fixed Cloudflare/Vite parse error caused by `LifeOSLogo.jsx` importing itself:
+
+`import LifeOSLogo from "./LifeOSLogo";`
+
+The shared component now only declares and exports `LifeOSLogo`, while consuming components import it normally.

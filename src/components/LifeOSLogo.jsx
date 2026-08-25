@@ -1,5 +1,4 @@
 import React from "react";
-import LifeOSLogo from "./LifeOSLogo";
 
 export default function LifeOSLogo({ variant = "full", className = "", style = {} }) {
   const src = "/brand/lifeos-logo.png";
