@@ -124,3 +124,86 @@
 @media(max-width:440px){
   .travelPlanGrid{grid-template-columns:1fr}.travelStepRail:before{left:10%;right:10%}.travelStep b{font-size:8px}.travelDemoPanel{padding:16px}.travelPanelTitle h2,.travelModuleHero h2,.travelDashboardHead h2{font-size:21px}
 }
+
+
+/* v1.9.1 header logo + hero alignment correction */
+.publicHeaderInner{
+  min-height:78px;
+  height:auto;
+  padding-top:8px;
+  padding-bottom:8px;
+}
+.publicBrand{
+  flex:0 0 auto;
+  min-width:max-content;
+  gap:12px;
+  padding:0;
+  line-height:1;
+}
+.publicBrand .lifeos-logo-mark{
+  width:58px !important;
+  height:58px !important;
+  min-width:58px;
+  border-radius:12px !important;
+  overflow:visible !important;
+  background:transparent !important;
+}
+.publicBrand .lifeos-logo-mark img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  transform:none !important;
+}
+.publicBrand .brand-text{
+  display:block;
+  font-size:clamp(1.55rem,1.35rem + .5vw,2rem) !important;
+  line-height:1 !important;
+  margin:0;
+}
+.hero{
+  grid-template-columns:minmax(0,1fr) minmax(420px,.92fr);
+  gap:64px;
+  align-items:center;
+  padding:72px 0 64px;
+}
+.heroCopy{
+  align-self:center;
+  min-width:0;
+}
+.heroCopy h1{
+  font-size:clamp(46px,5.1vw,68px);
+  line-height:1.01;
+  max-width:650px;
+  margin:20px 0 20px;
+}
+.heroCopy p{
+  max-width:610px;
+}
+.heroMock{
+  width:100%;
+  max-width:500px;
+  justify-self:end;
+  transform:none !important;
+}
+@media(max-width:980px){
+  .publicHeaderInner{gap:14px}
+  .publicNav{gap:12px}
+  .publicBrand .lifeos-logo-mark{width:50px !important;height:50px !important;min-width:50px}
+  .publicBrand .brand-text{font-size:1.55rem !important}
+  .hero{grid-template-columns:1fr 1fr;gap:30px}
+  .heroCopy h1{font-size:clamp(42px,6vw,58px)}
+}
+@media(max-width:760px){
+  .publicHeaderInner{min-height:70px;padding-top:7px;padding-bottom:7px}
+  .publicBrand{gap:8px}
+  .publicBrand .lifeos-logo-mark{width:44px !important;height:44px !important;min-width:44px}
+  .publicBrand .brand-text{font-size:1.35rem !important}
+  .hero{grid-template-columns:1fr;gap:34px;padding:46px 0 34px}
+  .heroMock{max-width:560px;justify-self:center}
+  .heroCopy h1{font-size:clamp(42px,11vw,54px)}
+}
+@media(max-width:430px){
+  .publicBrand .lifeos-logo-mark{width:40px !important;height:40px !important;min-width:40px}
+  .publicBrand .brand-text{font-size:1.25rem !important}
+  .heroCopy h1{font-size:40px;letter-spacing:-2px}
+}

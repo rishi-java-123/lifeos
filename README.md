@@ -138,3 +138,10 @@ The interactive demo now tells one complete Life OS story:
 7. The completed trip and journal appear in the user's My Life portal.
 
 All demo interactions are browser-local sample state and do not require a backend.
+
+
+## v1.9.1 visual alignment fix
+- Enlarged the public header logo and aligned it vertically with the Life OS wordmark.
+- Responsive logo sizing for desktop/tablet/mobile.
+- Removed the slight hero-card rotation and balanced the hero columns.
+- Restored approved hero message: `Your whole life. One smart place.`
