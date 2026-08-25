@@ -26,3 +26,62 @@
 .demoVideoHeading{display:flex;align-items:center;gap:10px;margin-bottom:15px;color:#5f47d6}
 .demoVideoHeading div{display:flex;flex-direction:column;gap:2px}.demoVideoHeading small{color:#737b91;font-size:12px;font-weight:500}
 @media(max-width:700px){.videoShowcase{padding-top:48px}.promoVideoFrame{border-radius:18px}.promoPlay{width:58px;height:58px}.promoControls{opacity:1;left:8px;right:8px;bottom:8px}.promoControls span{display:none}.demoVideoSection{padding:12px;border-radius:18px}}
+
+/* Prominent Life OS branding on authentication screens */
+.authBrandProminent{
+  width:100%;
+  padding:4px 0 12px;
+  margin:0 auto 14px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border:0;
+  background:transparent;
+}
+.authBrandProminent .authFullLogo{
+  width:clamp(210px,72vw,310px);
+  height:auto;
+  max-height:250px;
+  object-fit:contain;
+}
+@media(max-width:480px){
+  .authBrandProminent .authFullLogo{
+    width:min(76vw,260px);
+    max-height:215px;
+  }
+  .authPage{padding-top:16px;}
+}
+
+
+/* v1.8.3 responsive Life OS wordmark sizing */
+.brand,
+.public-brand,
+.site-brand,
+.lifeos-brand,
+.brand-text {
+  font-size: clamp(1.35rem, 1.1rem + 0.55vw, 1.9rem) !important;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .brand,
+  .public-brand,
+  .site-brand,
+  .lifeos-brand,
+  .brand-text {
+    font-size: clamp(1.25rem, 1.05rem + 0.45vw, 1.6rem) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .brand,
+  .public-brand,
+  .site-brand,
+  .lifeos-brand,
+  .brand-text {
+    font-size: 1.28rem !important;
+  }
+}

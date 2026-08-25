@@ -3,7 +3,7 @@ import LandingPage from './LandingPage';
 import AuthPage from './AuthPage';
 import InfoPage from './InfoPage';
 import PricingPage from './PricingPage';
-import BlogPage from './BlogPage';
+
 import DemoPage from './DemoPage';
 
 export default function PublicSite({screen,setScreen,onAuthenticated}){
@@ -15,8 +15,7 @@ export default function PublicSite({screen,setScreen,onAuthenticated}){
  if(screen==='signin') return <AuthPage mode="signin" onSubmit={signin} message={message} go={go}/>;
  if(screen==='register') return <AuthPage mode="register" onSubmit={register} message={message} go={go}/>;
  if(screen==='pricing') return <PricingPage go={go}/>;
- if(screen==='blog') return <BlogPage go={go}/>;
- if(screen==='demo') return <DemoPage go={go}/>;
+if(screen==='demo') return <DemoPage go={go}/>;
  if(screen.startsWith('feature-')||screen==='family-info'||screen==='security') return <InfoPage screen={screen} go={go}/>;
  return <LandingPage go={go} scrollTarget={scrollTarget}/>;
 }

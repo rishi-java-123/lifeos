@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function LifeOSLogo({ variant = "full", className = "", style = {} }) {
-  const src = "/brand/lifeos-logo.png";
+  const src = variant === "auth" ? "/brand/lifeos-logo-auth.png" : "/brand/lifeos-logo.png";
 
   if (variant === "mark") {
     return (

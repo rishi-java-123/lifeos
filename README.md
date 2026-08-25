@@ -106,3 +106,15 @@ Fixed Cloudflare/Vite parse error caused by `LifeOSLogo.jsx` importing itself:
 `import LifeOSLogo from "./LifeOSLogo";`
 
 The shared component now only declares and exports `LifeOSLogo`, while consuming components import it normally.
+
+## v1.8.2 prominent authentication branding
+
+- Login and registration now show the complete Life OS logo prominently above the form.
+- Added `public/brand/lifeos-logo-auth.png`, a tightly fitted version of the same approved logo with unnecessary outer whitespace removed.
+- The auth logo scales responsively: large on desktop and safely contained on mobile.
+- Public header/dashboard branding remains compact.
+
+
+## v1.8.3 navigation and branding
+- Removed Blog from public header/footer and related public navigation.
+- Increased the Life OS wordmark responsively across desktop, tablet, and mobile.
