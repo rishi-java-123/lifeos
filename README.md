@@ -118,3 +118,10 @@ The shared component now only declares and exports `LifeOSLogo`, while consuming
 ## v1.8.3 navigation and branding
 - Removed Blog from public header/footer and related public navigation.
 - Increased the Life OS wordmark responsively across desktop, tablet, and mobile.
+
+## v1.8.4 messaging update
+Public positioning now uses:
+- "Your whole life. One smart place."
+- "Your life. Your needs. Your own smart space."
+- "Organize what matters, create what you need, and let AI help you stay one step ahead."
+The embedded promo end card uses the same language.
