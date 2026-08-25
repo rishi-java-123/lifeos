@@ -125,3 +125,16 @@ Public positioning now uses:
 - "Your life. Your needs. Your own smart space."
 - "Organize what matters, create what you need, and let AI help you stay one step ahead."
 The embedded promo end card uses the same language.
+
+
+## v1.9 Travel AI Builder end-to-end demo
+The interactive demo now tells one complete Life OS story:
+1. User describes a Goa trip.
+2. AI creates a Travel Space.
+3. User manages flight, hotel, budget, packing and itinerary.
+4. A flight delay demonstrates AI-assisted itinerary adaptation.
+5. User captures an expense and a travel highlight.
+6. Life OS creates a Travel Journal after the trip.
+7. The completed trip and journal appear in the user's My Life portal.
+
+All demo interactions are browser-local sample state and do not require a backend.
