@@ -207,3 +207,111 @@
   .publicBrand .brand-text{font-size:1.25rem !important}
   .heroCopy h1{font-size:40px;letter-spacing:-2px}
 }
+
+
+/* v1.9.2 footer branding + alignment */
+.publicFooter{
+  padding:54px 0 34px;
+}
+.footerGrid{
+  align-items:start;
+  column-gap:52px;
+}
+.footerGrid>div:first-child{
+  min-width:0;
+}
+.footerBrand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:0;
+  margin:0 0 14px;
+  line-height:1;
+}
+.footerBrand .lifeos-logo-mark{
+  width:54px !important;
+  height:54px !important;
+  min-width:54px;
+  background:transparent !important;
+  overflow:visible !important;
+}
+.footerBrand .lifeos-logo-mark img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+}
+.footerBrand .brand-text{
+  font-size:clamp(1.55rem,1.35rem + .45vw,1.95rem) !important;
+  line-height:1 !important;
+}
+.footerGrid>div:first-child>p{
+  margin:0 0 22px;
+  max-width:260px;
+  line-height:1.5;
+}
+.footerCopy{
+  margin-top:6px;
+}
+.footerGrid>div:not(:first-child)>b{
+  display:block;
+  margin-bottom:10px;
+}
+.footerGrid>div:not(:first-child) button{
+  display:block;
+  padding:5px 0;
+  text-align:left;
+}
+@media(max-width:900px){
+  .footerGrid{
+    grid-template-columns:1.35fr 1fr 1fr;
+    gap:30px;
+  }
+  .footerGrid>div:nth-child(4){
+    grid-column:2/4;
+  }
+  .footerBrand .lifeos-logo-mark{
+    width:50px !important;
+    height:50px !important;
+    min-width:50px;
+  }
+  .footerBrand .brand-text{
+    font-size:1.5rem !important;
+  }
+}
+@media(max-width:640px){
+  .publicFooter{padding:40px 0 26px}
+  .footerGrid{
+    grid-template-columns:1fr 1fr !important;
+    gap:28px 22px;
+  }
+  .footerGrid>div:first-child{
+    grid-column:1/-1;
+  }
+  .footerGrid>div:nth-child(4){
+    grid-column:auto;
+  }
+  .footerBrand .lifeos-logo-mark{
+    width:46px !important;
+    height:46px !important;
+    min-width:46px;
+  }
+  .footerBrand .brand-text{
+    font-size:1.4rem !important;
+  }
+  .footerGrid>div:first-child>p{
+    max-width:100%;
+    margin-bottom:14px;
+  }
+}
+@media(max-width:420px){
+  .footerGrid{grid-template-columns:1fr !important}
+  .footerGrid>div:first-child{grid-column:auto}
+  .footerBrand .lifeos-logo-mark{
+    width:42px !important;
+    height:42px !important;
+    min-width:42px;
+  }
+  .footerBrand .brand-text{
+    font-size:1.3rem !important;
+  }
+}

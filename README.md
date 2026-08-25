@@ -145,3 +145,8 @@ All demo interactions are browser-local sample state and do not require a backen
 - Responsive logo sizing for desktop/tablet/mobile.
 - Removed the slight hero-card rotation and balanced the hero columns.
 - Restored approved hero message: `Your whole life. One smart place.`
+
+
+## v1.9.2 footer alignment fix
+- Enlarged and aligned footer logo + Life OS wordmark.
+- Improved footer spacing and column behavior on desktop/tablet/mobile.
